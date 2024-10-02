@@ -58,11 +58,23 @@ template{
   display: flex;
   justify-content: center;
   justify-items: center;
+
 }
 
 body{
   width: auto;
-  height: auto;
+  height: 520px;
+  background-image: url(./image/blackboard-inscribed-with-scientific-formulas-calculations.jpg);
+  background-size:contain;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+ 
+}
+.container{
+  background-color: rgba(0, 0, 0, 0.872);
+  width: 700px;
+  border-radius: 25px;
 }
 
 </style>

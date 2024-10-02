@@ -4,8 +4,8 @@ const props = defineProps(['num1', 'num2', 'operacoes', 'resultado'])
 
 <template>
     <form>
-    <input @change="props.num1" type="number" placeholder="1º numero">
-    <input @change="props.num2" type="number" placeholder="2º numero">
+    <input class="ponta" @change="props.num1" type="number" placeholder="1º numero">
+    <input class="centro" @change="props.num2" type="number" placeholder="2º numero">
     <div>
       <select @change="props.operacoes">
         <option value="soma">Soma</option>
@@ -15,13 +15,16 @@ const props = defineProps(['num1', 'num2', 'operacoes', 'resultado'])
       </select>
     </div>
   </form>
-  <h3>Resultado :<br> {{ props.resultado }}</h3>
+  <h3>Resultado<br> {{ props.resultado }}</h3>
 </template>
 
 <style scoped>
+
+
 form{
-  display:grid;
-  justify-items: center;
+  display:flex;
+  justify-content: center;
+  padding: 25px 0;
 }
 
 input{
@@ -35,6 +38,7 @@ input{
 
 select{
   height: 40px;
+  text-align: center;
   border-radius: 20px;
   border-color: transparent;
   height: 45px;
@@ -47,6 +51,18 @@ option{
 }
 
 h3{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  font-size: 40px;
+}
+
+.ponta{
+  text-align: center;
+}
+
+.centro{
+  margin: 0 20px;
   text-align: center;
 }
 </style>
